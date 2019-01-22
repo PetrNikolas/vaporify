@@ -1,20 +1,32 @@
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/1342803/43925087-512bb1de-9bf4-11e8-869f-057af9afadb9.png" width="320" alt="Auth Template">
-    <br>
-    <br>
-    <a href="http://docs.vapor.codes/3.0/">
-        <img src="http://img.shields.io/badge/read_the-docs-2196f3.svg" alt="Documentation">
-    </a>
-    <a href="https://discord.gg/vapor">
-        <img src="https://img.shields.io/discord/431917998102675485.svg" alt="Team Chat">
-    </a>
-    <a href="LICENSE">
-        <img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
-    </a>
-    <a href="https://circleci.com/gh/vapor/auth-template">
-        <img src="https://circleci.com/gh/vapor/auth-template.svg?style=shield" alt="Continuous Integration">
-    </a>
-    <a href="https://swift.org">
-        <img src="http://img.shields.io/badge/swift-4.1-brightgreen.svg" alt="Swift 4.1">
-    </a>
-</p>
+# Vaporify
+
+Simple starter kit for web applications in Swift and Vapor!
+
+## Table of Contents
+
+* [Quick Start](#quick-start)
+* [Build for production](#build-&-run)
+
+## Quick start
+
+* Clone the repo.
+* Run `vapor build` and `vapor run`.
+
+## Build & Run
+
+You can use the toolbox to build and run your Vapor app.
+
+```bash
+vapor build
+vapor run
+```
+
+We recommend building and running through Xcode if you have a Mac. It's a bit faster and you can set breakpoints! Just use `vapor xcode` to generate an Xcode project.
+
+## Troubleshooting
+
+If you are experiencing problems with SPM, sometimes cleaning your project can help.
+
+```bash
+vapor clean
+```
