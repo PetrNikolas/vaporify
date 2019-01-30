@@ -2,6 +2,8 @@
 
 Simple starter kit for web applications in Swift and Vapor!
 
+* Version: v0.0.1
+
 ## Table of Contents
 
 * [Quick Start](#quick-start)
