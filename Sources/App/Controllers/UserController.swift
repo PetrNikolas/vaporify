@@ -38,7 +38,17 @@ final class UserController {
 
     /// Return a list of users
     func list(_ req: Request) throws -> Future<[User]> {
-        return try User.query(on: req).all()
+        return User.query(on: req).all()
+    }
+
+    /// Update user by user ID
+    func update(_ req: Request) throws -> Future<User> {
+        return try req.parameters.next(User.self).flatMap { user in
+            return try req.content.decode(User.self).flatMap { newUser in
+                user.name = newUser.name
+                return user.save(on: req)
+            }
+        }
     }
 }
 

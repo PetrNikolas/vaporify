@@ -13,6 +13,9 @@ public func routes(_ router: Router) throws {
 
     // Get list with all users
     router.get("users", use: userController.list)
+
+    // Update user
+    router.patch("users", User.parameter, use: userController.update)
     
     // bearer / token auth protected routes
     let bearer = router.grouped(User.tokenAuthMiddleware())
