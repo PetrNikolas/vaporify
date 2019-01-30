@@ -35,6 +35,11 @@ final class UserController {
             return try UserResponse(id: user.requireID(), name: user.name, email: user.email)
         }
     }
+
+    /// Return a list of users
+    func list(_ req: Request) throws -> Future<[User]> {
+        return try User.query(on: req).all()
+    }
 }
 
 // MARK: Content
