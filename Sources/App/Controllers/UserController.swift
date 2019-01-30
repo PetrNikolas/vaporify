@@ -36,6 +36,16 @@ final class UserController {
         }
     }
 
+    /// Logout user
+    func logout(_ req: Request) throws -> Future<HTTPResponse> {
+        let user = try req.requireAuthenticated(User.self)
+        return try UserToken
+            .query(on: req)
+            .filter(\UserToken.userID, .equal, user.requireID())
+            .delete()
+            .transform(to: HTTPResponse(status: .ok))
+    }
+
     /// Return a list of users
     func list(_ req: Request) throws -> Future<[User]> {
         return User.query(on: req).all()
