@@ -44,7 +44,6 @@ final class TodoController {
     }
 }
 
-// MARK: Content
 
 /// Represents data required to create a new todo.
 struct CreateTodoRequest: Content {

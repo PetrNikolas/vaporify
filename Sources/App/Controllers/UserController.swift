@@ -42,7 +42,6 @@ final class UserController {
     }
 }
 
-// MARK: Content
 
 /// Data required to create a user.
 struct CreateUserRequest: Content {
